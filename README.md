@@ -31,6 +31,5 @@ If this list exists then we will be taken to this list otherwise a new list will
 
 # Hosted on heroku!
 It is hosted on heroku and uses mongodb atlas to store the lists.
-Link - https://gentle-temple-49350.herokuapp.com/
 
 Note - The project is in the master branch.
