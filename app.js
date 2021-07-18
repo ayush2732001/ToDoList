@@ -1,12 +1,12 @@
 //jshint esversion:6
-
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require('lodash');
 const app = express();
 // ?retryWrites=true&w=majority
-mongoose.connect("mongodb+srv://admin-ayush:joyayush@cluster0.vfg1k.mongodb.net/todolistDB?retryWrites=true&w=majority&ssl=true",{useNewUrlParser: true,useUnifiedTopology:true});
+mongoose.connect("mongodb+srv://admin-"+process.env.ADMIN+":"+process.env.PASSWORD+"@cluster0.vfg1k.mongodb.net/todolistDB?retryWrites=true&w=majority&ssl=true",{useNewUrlParser: true,useUnifiedTopology:true});
 // mongoose.connect("mongodb://admin-ayush:joyayush@cluster0-shard-00-00.vfg1k.mongodb.net:27017,cluster0-shard-00-01.vfg1k.mongodb.net:27017,cluster0-shard-00-02.vfg1k.mongodb.net:27017/todolistDB?ssl=true&replicaSet=atlas-t6px4t-shard-0&authSource=admin&retryWrites=true&w=majority
 // ",{useNewUrlParser: true,useUnifiedTopology:true});
 
